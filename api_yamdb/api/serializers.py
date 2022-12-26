@@ -1,11 +1,10 @@
 from datetime import datetime
 
-from rest_framework import serializers
 from django.shortcuts import get_object_or_404
+from rest_framework import serializers
 from rest_framework.relations import SlugRelatedField
-
+from reviews.models import Category, Comment, Genre, Review, Title
 from users.models import User
-from reviews.models import Comment, Review, Title, Genre, Category
 
 
 class SignUpSerializer(serializers.ModelSerializer):
