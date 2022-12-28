@@ -4,11 +4,11 @@ from datetime import timedelta
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-SECRET_KEY = os.getenv('SECRET_KEY')
+SECRET_KEY = os.getenv('SECRET_KEY', 'p&l%385148kslhtyn^##a1)ilz@4zqj=rq&agdol^##zgl9(vs')
 
 DEBUG = False
 
-ALLOWED_HOSTS = os.getenv('SECRET_KEY')
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '*')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
