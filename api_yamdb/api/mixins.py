@@ -1,9 +1,6 @@
-from rest_framework import (
-    mixins, viewsets,
-    exceptions, status
-)
-from rest_framework.response import Response
 from django.http.response import Http404
+from rest_framework import exceptions, mixins, status, viewsets
+from rest_framework.response import Response
 
 
 class GetPostDeleteViewset(

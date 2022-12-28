@@ -3,9 +3,7 @@ import sys
 from csv import DictReader
 
 from django.core.management import BaseCommand
-
 from reviews.models import Category, Comment, Genre, Review, Title, User
-
 
 LOG_FORMAT = "%(asctime)s [%(levelname)s] %(message)s"
 logger = logging.getLogger(__name__)

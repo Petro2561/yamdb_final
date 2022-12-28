@@ -1,37 +1,29 @@
-from django.contrib.auth.base_user import BaseUserManager
-from django.core.mail import send_mail
-from rest_framework.views import APIView
-from rest_framework.response import Response
-from rest_framework import status
-from rest_framework import permissions
-from django.contrib.auth.hashers import make_password
 from django.conf import settings
-from django.shortcuts import get_object_or_404
-from rest_framework.permissions import IsAuthenticated
-from rest_framework.viewsets import ModelViewSet
-from rest_framework.filters import SearchFilter
-from rest_framework import exceptions
-from rest_framework.decorators import action
-from rest_framework.pagination import LimitOffsetPagination
-from django_filters.rest_framework import DjangoFilterBackend
+from django.contrib.auth.base_user import BaseUserManager
+from django.contrib.auth.hashers import make_password
+from django.core.mail import send_mail
 from django.db.models import Avg
-
-from .serializers import (
-    SignUpSerializer, TokenObtainSerializer,
-    UsersSerializer, AdminRightsSerializer,
-    AdminPatchSerializer, ReviewSerializer,
-    CommentSerializer, CategorySerializer,
-    GenreSerializer, TitleSerializer,
-    GetTitleSerializer
-)
+from django.shortcuts import get_object_or_404
+from django_filters.rest_framework import DjangoFilterBackend
+from rest_framework import exceptions, permissions, status
+from rest_framework.decorators import action
+from rest_framework.filters import SearchFilter
+from rest_framework.pagination import LimitOffsetPagination
+from rest_framework.permissions import IsAuthenticated
+from rest_framework.response import Response
+from rest_framework.views import APIView
+from rest_framework.viewsets import ModelViewSet
+from reviews.models import Category, Genre, Review, Title
 from users.models import User
-from reviews.models import Review, Title, Genre, Category
-from .permissions import (
-    AdminOnly, AdminOrReadOnly,
-    IsAuthorOrReadOnly
-)
-from .mixins import CustomHandlerModelViewSet, GetPostDeleteViewset
+
 from .filters import TitlesFilter
+from .mixins import CustomHandlerModelViewSet, GetPostDeleteViewset
+from .permissions import AdminOnly, AdminOrReadOnly, IsAuthorOrReadOnly
+from .serializers import (AdminPatchSerializer, AdminRightsSerializer,
+                          CategorySerializer, CommentSerializer,
+                          GenreSerializer, GetTitleSerializer,
+                          ReviewSerializer, SignUpSerializer, TitleSerializer,
+                          TokenObtainSerializer, UsersSerializer)
 
 
 class SignUpViewSet(APIView):

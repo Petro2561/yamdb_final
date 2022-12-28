@@ -1,9 +1,7 @@
 import jwt
-
+from django.conf import settings
 from rest_framework import authentication, exceptions
 from rest_framework.authentication import get_authorization_header
-from django.conf import settings
-
 from users.models import User
 
 
