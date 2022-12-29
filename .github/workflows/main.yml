@@ -44,7 +44,7 @@ jobs:
         with:
           context: ./api_yamdb/
           push: true
-          tags: petro2561/api_yamdb:latest
+          tags: petro2561/yambd_final:latest
 
 
 # deploy:
