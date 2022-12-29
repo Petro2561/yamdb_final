@@ -2,4 +2,4 @@
 yamdb_final.
 
 
-![main](https://github.com/Petro2561/yamdb_final/.github/workflows/main/badge.svg)
+![example workflow](https://github.com/github/docs/actions/workflows/main.yml/badge.svg)
