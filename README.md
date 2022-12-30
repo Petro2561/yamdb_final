@@ -35,4 +35,14 @@ GET /api/v1/titles/{title_id}/reviews/{review_id}/comments/
 [DRF]: <https://www.django-rest-framework.org/>
 [тут]: <http://127.0.0.1:8000/redoc/>
 
+## Запуск проекта на удаленном сервере.
+Для запуска проекта на удаленном сервере необходимо:
+- скопировать на сервер файлы docker-compose.yaml, .env и папку nginx командами:
+- scp docker-compose.yaml  <user>@<server-ip>:
+- scp -r nginx/ <user>@<server-ip>:
 
+После каждого обновления репозитория на локальном компьютере (git push) будет происходить:
+- Проверка кода на соответствие стандарту PEP8 (с помощью пакета flake8) и запуск pytest из репозитория yamdb_final
+- Сборка и доставка докер-образов на Docker Hub.
+- Автоматический деплой.
+- Отправка уведомления в Telegram. (необходимо задать переменные в git_secrets)
