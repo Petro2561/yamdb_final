@@ -1,6 +1,6 @@
-# yamdb_final
-![main_workflow](https://github.com/Petro2561/yamdb_final/actions/workflows/main.yml/badge.svg)
 # Проект YaMDb
+![main_workflow](https://github.com/Petro2561/yamdb_final/actions/workflows/main.yml/badge.svg)
+
 
 Проект "YaMDb" собирает отзывы пользователей на произведения.
 Сами произведения в "YaMDb" не хранятся, здесь нельзя посмотреть фильм или послушать музыку.
