@@ -1,5 +1,38 @@
 # yamdb_final
-![example workflow](https://github.com/Petro2561/yamdb_final/actions/workflows/main.yml/badge.svg)
-yamdb_final.
+![main_workflow](https://github.com/Petro2561/yamdb_final/actions/workflows/main.yml/badge.svg)
+# Проект YaMDb
+
+Проект "YaMDb" собирает отзывы пользователей на произведения.
+Сами произведения в "YaMDb" не хранятся, здесь нельзя посмотреть фильм или послушать музыку.
+Благодарные или возмущённые пользователи оставляют к произведениям текстовые отзывы и ставят произведению оценку.
+На основе пользовательских оценок формируется усреднённая оценка произведения — рейтинг.
+
+Проект подготовлен для изучения базовых принципов построения
+API на основе фреймворка [DRF]
+
+## Примеры работы с api проекта:
+
+Получение списка произведений
+
+```
+GET api/v1/titles/
+```
+
+Получение списка отзывов на произведение
+
+```
+ GET api/v1/titles/{title_id}/reviews/
+```
+
+Получение списка комментариев к отзывам
+
+```
+GET /api/v1/titles/{title_id}/reviews/{review_id}/comments/
+```
+
+Подробное описание api в формате ReDoc доступно [тут]
+
+[DRF]: <https://www.django-rest-framework.org/>
+[тут]: <http://127.0.0.1:8000/redoc/>
 
 
