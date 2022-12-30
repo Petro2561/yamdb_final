@@ -1,5 +1,5 @@
 # Проект YaMDb
-![main_workflow](https://github.com/Petro2561/yamdb_final/actions/workflows/main.yml/badge.svg)
+![main_workflow](https://github.com/Petro2561/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
 
 
 Проект "YaMDb" собирает отзывы пользователей на произведения.
