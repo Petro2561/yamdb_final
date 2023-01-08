@@ -41,6 +41,7 @@ GET /api/v1/titles/{title_id}/reviews/{review_id}/comments/
 - scp docker-compose.yaml  <user>@<server-ip>:
 - scp -r nginx/ <user>@<server-ip>:
 
+
 После каждого обновления репозитория на локальном компьютере (git push) будет происходить:
 - Проверка кода на соответствие стандарту PEP8 (с помощью пакета flake8) и запуск pytest из репозитория yamdb_final
 - Сборка и доставка докер-образов на Docker Hub.
