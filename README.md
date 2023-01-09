@@ -35,7 +35,7 @@ GET /api/v1/titles/{title_id}/reviews/{review_id}/comments/
 [DRF]: <https://www.django-rest-framework.org/>
 [тут]: http://localhost/redoc/
 
-## Запуск проекта на удаленном сервере.
+## Запуск проекта.
 Для запуска проекта необходимо:
 - скачать Docker https://docs.docker.com/get-docker/
 - клонировать репозитарий git clone https://github.com/Petro2561/yamdb_final.git
