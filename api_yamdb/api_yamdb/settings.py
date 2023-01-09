@@ -7,7 +7,7 @@ SECRET_KEY = os.getenv('SECRET_KEY', 'p&l%385148kslhtyn^##a1)ilz@4zqj=rq&agdol^#
 
 DEBUG = False
 
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '*')
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '*'.split())
 
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
