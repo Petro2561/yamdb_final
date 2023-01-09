@@ -33,17 +33,23 @@ GET /api/v1/titles/{title_id}/reviews/{review_id}/comments/
 Подробное описание api в формате ReDoc доступно [тут]
 
 [DRF]: <https://www.django-rest-framework.org/>
-[тут]: <http://127.0.0.1:8000/redoc/>
+[тут]: http://localhost/redoc/
 
 ## Запуск проекта на удаленном сервере.
-Для запуска проекта на удаленном сервере необходимо:
-- скопировать на сервер файлы docker-compose.yaml, .env и папку nginx командами:
-- scp docker-compose.yaml  <user>@<server-ip>:
-- scp -r nginx/ <user>@<server-ip>:
+Для запуска проекта необходимо:
+- скачать Docker https://docs.docker.com/get-docker/
+- клонировать репозитарий git clone https://github.com/Petro2561/yamdb_final.git
+- cоздать .env и заполнить по образцу:
+   DB_ENGINE=django.db.backends.postgresql
+   DB_NAME=postgres
+   POSTGRES_USER=postgres
+   POSTGRES_PASSWORD=<придумайте пароль>
+   DB_HOST=db
+   DB_PORT=5432
+   SECRET_KEY=<ключ в одинарных ковычках>
+- запустить проект docker-compose up -d
+- выполнить миграции командой docker-compose exec web python manage.py migrate
+- создать суперпользователя docker-compose exec web python manage.py createsuperuser
+- собрать статику docker-compose exec web python manage.py collectstatic
+- проект готов к запуску, http://localhost/admin/ можно перейти в админку
 
-
-После каждого обновления репозитория на локальном компьютере (git push) будет происходить:
-- Проверка кода на соответствие стандарту PEP8 (с помощью пакета flake8) и запуск pytest из репозитория yamdb_final
-- Сборка и доставка докер-образов на Docker Hub.
-- Автоматический деплой.
-- Отправка уведомления в Telegram. (необходимо задать переменные в git_secrets)
