@@ -49,7 +49,7 @@ class SignUpViewSet(APIView):
 
 
 class TokenObtainViewSet(APIView):
-    """Класс для получения токена."""
+    """Класс для получения (obtain) токена."""
 
     permission_classes = [permissions.AllowAny]
 

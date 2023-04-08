@@ -1,8 +1,8 @@
-from django_filters import rest_framework as filters
+from django_filters.rest_framework import FilterSet, filters
 from reviews.models import Title
 
 
-class TitlesFilter(filters.FilterSet):
+class TitlesFilter(FilterSet):
     """Фильтр для фильтрации кастомныйх полей."""
 
     name = filters.CharFilter(
